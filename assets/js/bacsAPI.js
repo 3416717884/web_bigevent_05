@@ -11,7 +11,7 @@ $(function () {
         // 拦截
         params.complete = function (res) {
             var obj = res.responseJSON;
-            if (obj.status !== 0 && obj.message !== '获取用户基本信息成功！') {
+            if (obj.status !== 0 && obj.message == '身份认证失败！') {
                 // 清空本地
                 localStorage.removeItem('token')
                 // 跳转页面
